@@ -15,6 +15,7 @@
 		5A14E0D82126C692006F40E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A14E0D72126C692006F40E8 /* main.m */; };
 		5A14E0E22126C693006F40E8 /* TestRACSignalSequenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A14E0E12126C693006F40E8 /* TestRACSignalSequenceTests.m */; };
 		5A14E0ED2126C693006F40E8 /* TestRACSignalSequenceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A14E0EC2126C693006F40E8 /* TestRACSignalSequenceUITests.m */; };
+		E97E8921E3ED4E2AC8AE6305 /* libPods-TestRACSignalSequenceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 413465640293648973885490 /* libPods-TestRACSignalSequenceTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13439A7B27CA68157E63D753 /* Pods-TestRACSignalSequenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRACSignalSequenceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestRACSignalSequenceTests/Pods-TestRACSignalSequenceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		413465640293648973885490 /* libPods-TestRACSignalSequenceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestRACSignalSequenceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A14E0C52126C691006F40E8 /* TestRACSignalSequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRACSignalSequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A14E0C82126C691006F40E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A14E0C92126C691006F40E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		5A14E0E82126C693006F40E8 /* TestRACSignalSequenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestRACSignalSequenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A14E0EC2126C693006F40E8 /* TestRACSignalSequenceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRACSignalSequenceUITests.m; sourceTree = "<group>"; };
 		5A14E0EE2126C693006F40E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98B2255D7EA21BB263B0E6AE /* Pods-TestRACSignalSequenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRACSignalSequenceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestRACSignalSequenceTests/Pods-TestRACSignalSequenceTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA77F15641385380545E4D6F /* libPods-TestRACSignalSequence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestRACSignalSequence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E97E8921E3ED4E2AC8AE6305 /* libPods-TestRACSignalSequenceTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14C9F65CBE0DE1A2EF20AFA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA77F15641385380545E4D6F /* libPods-TestRACSignalSequence.a */,
+				413465640293648973885490 /* libPods-TestRACSignalSequenceTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5A14E0BC2126C691006F40E8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +100,8 @@
 				5A14E0E02126C693006F40E8 /* TestRACSignalSequenceTests */,
 				5A14E0EB2126C693006F40E8 /* TestRACSignalSequenceUITests */,
 				5A14E0C62126C691006F40E8 /* Products */,
+				EA22F9EF9C0750E2842F3C08 /* Pods */,
+				14C9F65CBE0DE1A2EF20AFA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +149,15 @@
 			path = TestRACSignalSequenceUITests;
 			sourceTree = "<group>";
 		};
+		EA22F9EF9C0750E2842F3C08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13439A7B27CA68157E63D753 /* Pods-TestRACSignalSequenceTests.debug.xcconfig */,
+				98B2255D7EA21BB263B0E6AE /* Pods-TestRACSignalSequenceTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A14E0F42126C693006F40E8 /* Build configuration list for PBXNativeTarget "TestRACSignalSequenceTests" */;
 			buildPhases = (
+				D584FF68A30D21F43FA3D8C7 /* [CP] Check Pods Manifest.lock */,
 				5A14E0D92126C693006F40E8 /* Sources */,
 				5A14E0DA2126C693006F40E8 /* Frameworks */,
 				5A14E0DB2126C693006F40E8 /* Resources */,
@@ -256,6 +283,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D584FF68A30D21F43FA3D8C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestRACSignalSequenceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A14E0C12126C691006F40E8 /* Sources */ = {
@@ -463,6 +511,7 @@
 		};
 		5A14E0F52126C693006F40E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13439A7B27CA68157E63D753 /* Pods-TestRACSignalSequenceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +530,7 @@
 		};
 		5A14E0F62126C693006F40E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98B2255D7EA21BB263B0E6AE /* Pods-TestRACSignalSequenceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

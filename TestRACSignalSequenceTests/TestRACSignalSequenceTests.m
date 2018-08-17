@@ -8,32 +8,102 @@
 
 #import <XCTest/XCTest.h>
 
+#import <ReactiveCocoa.h>
+#import <RACSignalSequence.h>
+
 @interface TestRACSignalSequenceTests : XCTestCase
 
 @end
 
 @implementation TestRACSignalSequenceTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+- (void)test_sequenceWithSignal
+{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        [subscriber sendNext:@"1"];
+        [subscriber sendCompleted];
+        
+        return nil;
     }];
+    
+    RACSequence *sequence = [RACSignalSequence sequenceWithSignal:signal];
+    
+    NSLog(@"sequenceWithSignal -- %@", sequence);
+    
+    // 打印日志：
+    /*
+     2018-08-17 17:08:33.093062+0800 TestRACSignalSequence[50146:18295650] sequenceWithSignal -- <RACSignalSequence: 0x60400023fe80>{ name = , values = (
+     1
+     ) … }
+     */
+}
+
+- (void)test_head
+{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        [subscriber sendNext:@"1"];
+        [subscriber sendCompleted];
+        
+        return nil;
+    }];
+    
+    RACSequence *sequence = [RACSignalSequence sequenceWithSignal:signal];
+    
+    NSLog(@"head -- %@", sequence.head);
+    
+    // 打印日志：
+    /*
+     2018-08-17 17:10:39.537477+0800 TestRACSignalSequence[50245:18302711] head -- 1
+     */
+}
+
+- (void)test_tail
+{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        [subscriber sendNext:@"1"];
+        [subscriber sendNext:@"2"];
+        [subscriber sendCompleted];
+        
+        return nil;
+    }];
+    
+    RACSequence *sequence = [RACSignalSequence sequenceWithSignal:signal];
+    
+    NSLog(@"tail -- %@", sequence.tail);
+    
+    // 打印日志：
+    /*
+     2018-08-17 17:12:54.839794+0800 TestRACSignalSequence[50350:18310055] tail -- <RACSignalSequence: 0x60400023c820>{ name = , values = (
+     2
+     ) … }
+     */
+}
+
+- (void)test_array
+{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        [subscriber sendNext:@"1"];
+        [subscriber sendNext:@"2"];
+        [subscriber sendCompleted];
+        
+        return nil;
+    }];
+    
+    RACSequence *sequence = [RACSignalSequence sequenceWithSignal:signal];
+    
+    NSLog(@"array -- %@", sequence.array);
+    
+    // 打印日志：
+    /*
+     2018-08-17 17:17:30.637284+0800 TestRACSignalSequence[50521:18323552] array -- (
+     1,
+     2
+     )
+     */
 }
 
 @end
